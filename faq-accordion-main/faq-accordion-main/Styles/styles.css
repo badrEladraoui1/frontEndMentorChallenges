@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+}
+
+.flex{
+  display: flex;
+  gap: ;
+}
