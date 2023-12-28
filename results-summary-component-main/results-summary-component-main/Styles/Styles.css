@@ -8,8 +8,10 @@
 }
 
 body {
-  display: grid;
-  place-content: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bigContainer {
@@ -17,7 +19,6 @@ body {
   align-items: center;
   justify-content: center;
   /* padding: 2rem; */
-  margin-top: 10rem;
   box-shadow: 5px 10px 18px #f1f4fd;
   border-radius: 10vh;
 }
