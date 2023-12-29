@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
 
+:root {
+  --purple: hsl(281, 60%, 49%);
+  --gray: hsl(252, 45%, 98%);
+  --yellowish: hsl(292, 15%, 63%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,14 +20,59 @@ body {
   place-content: center;
 }
 
-.mainContainer{
+.mainContainer {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-
+  border: 2px solid red;
+  border-radius: 5vh;
 }
 
-.flex{
+.faq {
   display: flex;
-  gap: ;
+  margin: 4rem 0 0 2rem;
+  gap: 1.2rem;
+}
+
+.faq h1 {
+  font-weight: 900;
+}
+
+hr {
+  color: var(--gray);
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0;
+  padding: 2rem;
+  border: 2px solid red;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+}
+
+.flexColumn p {
+  color: var(--yellowish);
+  transition: 0.3s ease-in-out;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+}
+
+.flexRow h3:hover {
+  cursor: pointer;
+  color: var(--purple);
+}
+
+.flexRow img {
+  cursor: pointer;
 }
