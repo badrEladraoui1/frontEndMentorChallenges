@@ -14,10 +14,11 @@ const settingIdsAndAppendingChild = (
     const newSecondElem = document.createElement(newElement);
     newSecondElem.innerText = textToAdd;
     bigElem.appendChild(newSecondElem);
+
   } else {
     icon.src = "./assets/images/icon-plus.svg";
     const addedElem = bigElem.getElementsByTagName(newElement)[0]; // first paragraph found here
-    if (addedElem) addedElem.parentNode.removeChild(addedElem); // this important !!!
+    if (addedElem) addedElem.parentNode.removeChild(addedElem)
   }
 };
 
@@ -48,53 +49,56 @@ const addingParagraph1 = () => {
 
 // // testing first (to remove after)
 
-// const addingParagraph2 = () => {
-//   //   const div = document.getElementById("secondQuestion");
-//   //   const p = document.createElement("p");
-//   //   p.innerHTML =
-//   //     "Yes, Frontend Mentor offers both free and premium codingchallenges, with the free option providing access to a range of projects suitable for all skill levels.";
-//   //   div.appendChild(p);
-//   settingIdsAndAppendingChild(
-//     "secondQuestion",
-//     "p",
-//     "Yes, Frontend Mentor offers both free and premium codingchallenges, with the free option providing access to a range of projects suitable for all skill levels."
-//   );
-// };
+const addingParagraph2 = () => {
+  //   const div = document.getElementById("secondQuestion");
+  //   const p = document.createElement("p");
+  //   p.innerHTML =
+  //     "Yes, Frontend Mentor offers both free and premium codingchallenges, with the free option providing access to a range of projects suitable for all skill levels.";
+  //   div.appendChild(p);
+  settingIdsAndAppendingChild(
+    "plusQuestion2",
+    "secondQuestion",
+    "p",
+    "Yes, Frontend Mentor offers both free and premium codingchallenges, with the free option providing access to a range of projects suitable for all skill levels."
+  );
+};
 
-// // second method with the eventListener
+// second method with the eventListener
 
-// const addingParagraph3 = () => {
-//   //   const div = document.getElementById("thirdQuestion");
-//   //   const p = document.createElement("p");
-//   //   p.innerHTML =
-//   //     "Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!";
-//   //   div.appendChild(p);
-//   settingIdsAndAppendingChild(
-//     "thirdQuestion",
-//     "p",
-//     "Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!"
-//   );
-// };
-// {
-//   //   const plusIcon = document.getElementById("plusQuestion3");
-//   //   plusIcon.addEventListener("click", addingParagraph3);
-//   addingAnEventListener("plusQuestion3", "click", addingParagraph3);
-// }
+const addingParagraph3 = () => {
+  //   const div = document.getElementById("thirdQuestion");
+  //   const p = document.createElement("p");
+  //   p.innerHTML =
+  //     "Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!";
+  //   div.appendChild(p);
+  settingIdsAndAppendingChild(
+    "plusQuestion3",
+    "thirdQuestion",
+    "p",
+    "Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!"
+  );
+};
+{
+  //   const plusIcon = document.getElementById("plusQuestion3");
+  //   plusIcon.addEventListener("click", addingParagraph3);
+  addingAnEventListener("plusQuestion3", "click", addingParagraph3);
+}
 
-// const addingParagraph4 = () => {
-//   //   const div = document.getElementById("fourthQuestion");
-//   //   const p = document.createElement("p");
-//   //   p.innerHTML =
-//   //     "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.";
-//   //   div.appendChild(p);
-//   settingIdsAndAppendingChild(
-//     "fourthQuestion",
-//     "p",
-//     "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members."
-//   );
-// };
-// {
-//   //   const plusIcon = document.getElementById("plusQuestion4");
-//   //   plusIcon.addEventListener("click", addingParagraph4);
-//   addingAnEventListener("plusQuestion4", "click", addingParagraph4);
-// }
+const addingParagraph4 = () => {
+  //   const div = document.getElementById("fourthQuestion");
+  //   const p = document.createElement("p");
+  //   p.innerHTML =
+  //     "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.";
+  //   div.appendChild(p);
+  settingIdsAndAppendingChild(
+    "plusQuestion4",
+    "fourthQuestion",
+    "p",
+    "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members."
+  );
+};
+{
+  //   const plusIcon = document.getElementById("plusQuestion4");
+  //   plusIcon.addEventListener("click", addingParagraph4);
+  addingAnEventListener("plusQuestion4", "click", addingParagraph4);
+}
