@@ -1,3 +1,4 @@
+
 // we can use this reusable function instead of repeating it each time to set our element
 
 const settingIdsAndAppendingChild = (
@@ -34,11 +35,6 @@ const addingAnEventListener = (iconId, event, addingParagraphfunction) => {
 //first method with onClick in the html
 
 const addingParagraph1 = () => {
-  //   const div = document.getElementById("firstQuestion");
-  //   const p = document.createElement("p");
-  //   p.innerHTML =
-  //     "Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.";
-  //   div.appendChild(p);
   settingIdsAndAppendingChild(
     "plusQuestion1",
     "firstQuestion",
@@ -47,14 +43,10 @@ const addingParagraph1 = () => {
   );
 };
 
-// // testing first (to remove after)
+
 
 const addingParagraph2 = () => {
-  //   const div = document.getElementById("secondQuestion");
-  //   const p = document.createElement("p");
-  //   p.innerHTML =
-  //     "Yes, Frontend Mentor offers both free and premium codingchallenges, with the free option providing access to a range of projects suitable for all skill levels.";
-  //   div.appendChild(p);
+
   settingIdsAndAppendingChild(
     "plusQuestion2",
     "secondQuestion",
@@ -66,11 +58,7 @@ const addingParagraph2 = () => {
 // second method with the eventListener
 
 const addingParagraph3 = () => {
-  //   const div = document.getElementById("thirdQuestion");
-  //   const p = document.createElement("p");
-  //   p.innerHTML =
-  //     "Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!";
-  //   div.appendChild(p);
+
   settingIdsAndAppendingChild(
     "plusQuestion3",
     "thirdQuestion",
@@ -78,18 +66,9 @@ const addingParagraph3 = () => {
     "Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!"
   );
 };
-{
-  //   const plusIcon = document.getElementById("plusQuestion3");
-  //   plusIcon.addEventListener("click", addingParagraph3);
   addingAnEventListener("plusQuestion3", "click", addingParagraph3);
-}
 
 const addingParagraph4 = () => {
-  //   const div = document.getElementById("fourthQuestion");
-  //   const p = document.createElement("p");
-  //   p.innerHTML =
-  //     "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.";
-  //   div.appendChild(p);
   settingIdsAndAppendingChild(
     "plusQuestion4",
     "fourthQuestion",
@@ -97,8 +76,5 @@ const addingParagraph4 = () => {
     "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members."
   );
 };
-{
-  //   const plusIcon = document.getElementById("plusQuestion4");
-  //   plusIcon.addEventListener("click", addingParagraph4);
   addingAnEventListener("plusQuestion4", "click", addingParagraph4);
-}
+
