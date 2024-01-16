@@ -1,0 +1,25 @@
+.text{
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--DarkSlateGrey);
+}
+
+.checkSvg{
+    width: 1rem;
+    height: 1rem;
+}
+
+.textInfos{
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.textInfo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
