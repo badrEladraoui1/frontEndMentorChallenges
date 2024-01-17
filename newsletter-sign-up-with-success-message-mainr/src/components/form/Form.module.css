@@ -17,6 +17,7 @@
 .input{
     padding: 1rem;
     border-radius: 1vh;
+    border: 1px solid rgba(0, 0, 0, 0.24);
 }
 
 .button{
@@ -25,4 +26,5 @@
     color: var(--White);
     background-color:var(--DarkSlateGrey) ;
     padding: 10px;
+    cursor: pointer;
 }

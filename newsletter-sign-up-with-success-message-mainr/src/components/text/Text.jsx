@@ -6,7 +6,7 @@ import check from "../../assets/images/icon-success.svg";
 const Text = () => {
   return (
     <div className={styles.text}>
-      <h1>Stay updated !</h1>
+      <h1 className={styles.stayUpdated}>Stay updated !</h1>
 
       <p>Join 60,000+ product managers receiving monthly updates on:</p>
 

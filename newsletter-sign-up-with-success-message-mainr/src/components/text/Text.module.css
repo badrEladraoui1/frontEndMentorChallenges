@@ -6,6 +6,10 @@
     color: var(--DarkSlateGrey);
 }
 
+.stayUpdated{
+    font-size: 55px;
+}
+
 .checkSvg{
     width: 1rem;
     height: 1rem;
@@ -14,7 +18,7 @@
 .textInfos{
     display: flex;
     flex-direction: column;
-    gap: 5px
+    gap: 10px
 }
 
 .textInfo{
