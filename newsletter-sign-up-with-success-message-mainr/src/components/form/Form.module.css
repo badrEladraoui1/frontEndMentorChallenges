@@ -1,0 +1,28 @@
+.formContainer{
+    border: 2px solid blue ;
+    display: flex;
+    flex-direction: column;
+}
+
+.emailAddress{
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.input{
+    padding: 1rem;
+    border-radius: 1vh;
+}
+
+.button{
+    border-radius: 1vh;
+    border: none;
+    color: var(--White);
+    background-color:var(--DarkSlateGrey) ;
+    padding: 10px;
+}
