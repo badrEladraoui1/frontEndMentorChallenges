@@ -30,7 +30,7 @@ const Form = ({ onIsSubscribedToTrue }) => {
     <div className={styles.formContainer}>
       <h4 className={styles.emailAddress}>
         {" "}
-        Email address {!isEmailValid ? <p>Valid email required</p> : ""}
+        Email address { !isEmailValid ? <p>Valid email required</p> : ""}
       </h4>
       <form onSubmit={handleSubmit} className={styles.form}>
         <input
