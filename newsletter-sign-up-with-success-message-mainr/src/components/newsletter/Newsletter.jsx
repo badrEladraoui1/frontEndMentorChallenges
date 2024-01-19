@@ -7,15 +7,18 @@ import img from "../../assets/images/illustration-sign-up-desktop.svg";
 
 import styles from "./Newsletter.module.css";
 
-const Newsletter = ({ onIsSubscribedToTrue }) => {
+const Newsletter = ({ onIsSubscribedToTrue, onGetEmailFromForm }) => {
   return (
     <div className={styles.newsletter}>
       <div className={styles.newsletterContent}>
         <div className={styles.textAndForm}>
           <Text />
-          <Form onIsSubscribedToTrue={onIsSubscribedToTrue} />
+          <Form
+            onIsSubscribedToTrue={onIsSubscribedToTrue}
+            onGetEmailFromForm={onGetEmailFromForm}
+          />
         </div>
-        <img src={img}></img>
+        <img className={styles.img} src={img}></img>
       </div>
     </div>
   );

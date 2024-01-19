@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import styles from "./Text.module.css";
 
@@ -11,7 +12,6 @@ const Text = () => {
       <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
       <div className={styles.textInfos}>
-
         <div className={styles.textInfo}>
           <img className={styles.checkSvg} src={check} alt="check-icon"></img>
           <p>Product discovery and building what matters</p>
@@ -25,7 +25,6 @@ const Text = () => {
           <p>And much more!</p>
         </div>
       </div>
-
     </div>
   );
 };

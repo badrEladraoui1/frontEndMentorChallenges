@@ -4,11 +4,7 @@ import styles from "./Thanks.module.css";
 
 import img from "../../assets/images/icon-success.svg";
 
-const Thanks = ({ email, onIsDismissedToTrue }) => {
-  const handleClick = () => {
-    onIsDismissedToTrue(true)
-  };
-
+const Thanks = ({ emailToThanks }) => {
   return (
     <div className={styles.thanks}>
       <div className={styles.innerContainer}>
@@ -16,12 +12,10 @@ const Thanks = ({ email, onIsDismissedToTrue }) => {
         <h1 className={styles.h1}>Thanks for subscribing!</h1>
         <p className={styles.p}>
           A confirmation email has been sent to{" "}
-          <span className={styles.span}>email{email}</span> Please open it and
-          click the button inside to confirm your subscription.
+          <span className={styles.span}>{emailToThanks}</span> Please open it
+          and click the button inside to confirm your subscription.
         </p>
-        <button className={styles.button} onClick={handleClick}>
-          Dismiis message
-        </button>
+        <button className={styles.button}>Dismiss message</button>
       </div>
     </div>
   );

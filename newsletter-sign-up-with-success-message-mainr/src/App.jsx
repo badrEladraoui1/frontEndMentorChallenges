@@ -9,29 +9,26 @@ import "./App.css";
 
 const App = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [emailToThanks, setEmailToThanks] = useState("");
+
+  const getEmailFromForm = (email) => {
+    setEmailToThanks(email);
+  };
 
   const isSubscribedToTrue = (trueBool) => {
     setIsSubscribed(trueBool);
-    setIsDismissed(!trueBool)
-  };
-
-  const isDismissedToTrue = (trueBool) => {
-    setIsDismissed(trueBool);
-    setIsSubscribed(!trueBool);
   };
 
   return (
     <div className="app">
-      {(!isSubscribed && !isDismissed ) || (isSubscribed && isDismissed )? (
-        <Newsletter onIsSubscribedToTrue={isSubscribedToTrue} />
+      {!isSubscribed ? (
+        <Newsletter
+          onIsSubscribedToTrue={isSubscribedToTrue}
+          onGetEmailFromForm={getEmailFromForm}
+        />
       ) : (
-        <Thanks onIsDismissedToTrue={isDismissedToTrue} />
+        <Thanks emailToThanks={emailToThanks} />
       )}
-      {/* {!isSubscribed && (
-        <Newsletter onIsSubscribedToTrue={isSubscribedToTrue} />
-      )}
-      {isSubscribed && <Thanks onIsDismissedToTrue={isDismissedToTrue} />} */}
     </div>
   );
 };
