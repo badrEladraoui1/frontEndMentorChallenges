@@ -1,24 +1,54 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Form.module.css";
+import emailjs from "@emailjs/browser";
+
+//uTP_0eUZdxlCh8VTs
+//service_y9h5hak
+//template_pnq4hsz
 
 const Form = ({ onIsSubscribedToTrue, onGetEmailFromForm }) => {
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
+  const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => emailjs.init("uTP_0eUZdxlCh8VTs"), []);
 
   const checkEmail = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    const testing = emailRegex.test(email);
+    if (testing) {
+      const name = email.split("@").slice(0, 1).join();
+      setName(name);
+      console.log(name);
+    }
+    return testing;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const emailResult = checkEmail();
     if (emailResult) {
       onIsSubscribedToTrue(true);
       setIsEmailValid(true);
       onGetEmailFromForm(email);
+
+      const serviceId = "service_y9h5hak";
+      const templateId = "template_pnq4hsz";
+
+      try {
+        setLoading(true);
+        await emailjs.send(serviceId, templateId, {
+          name: name,
+          email: email,
+        });
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
     } else setIsEmailValid(false);
   };
 

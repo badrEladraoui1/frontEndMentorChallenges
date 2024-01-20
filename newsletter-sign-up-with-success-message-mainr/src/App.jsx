@@ -19,6 +19,10 @@ const App = () => {
     setIsSubscribed(trueBool);
   };
 
+  const dismissHandler = () => {
+    setIsSubscribed(false);
+  };
+
   return (
     <div className="app">
       {!isSubscribed ? (
@@ -27,7 +31,10 @@ const App = () => {
           onGetEmailFromForm={getEmailFromForm}
         />
       ) : (
-        <Thanks emailToThanks={emailToThanks} />
+        <Thanks
+          emailToThanks={emailToThanks}
+          ondIsDismissHandler={dismissHandler}
+        />
       )}
     </div>
   );
