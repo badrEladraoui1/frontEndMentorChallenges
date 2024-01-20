@@ -10,7 +10,6 @@
 
 .newsletterContent {
   padding: 1rem;
-  /* border: 2px solid green; */
   display: flex;
   gap: 3.5rem;
 }
@@ -18,10 +17,29 @@
 @media (max-width: 783px) {
   .newsletterContent {
     flex-direction: column-reverse;
+    padding: 0rem;
   }
   .img {
-    /* height: 30rem; */
-    scale: 1.2;
+    object-fit: contain;
+  }
+  .textAndForm {
+    .newsletterContent {
+      padding: 1rem;
+      display: flex;
+      gap: 3.5rem;
+    }
+  }
+}
+
+@media (max-width: 518px) {
+  .newsletter {
+    border-radius: 0vh;
+    padding: 0rem;
+    /* margin-bottom: 5rem; */
+  }
+  .img {
+    width: 100%;
+    /* z-index: -1; */
   }
 }
 
